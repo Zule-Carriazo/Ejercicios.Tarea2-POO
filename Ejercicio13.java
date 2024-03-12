@@ -1,42 +1,42 @@
-package com.mycompany.ejercicio10;
+package com.mycompany.ejercicio13;
 import java.util.Scanner;
-
-
 public class Ejercicio13 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String nombre;
-        int horasTrabajadas;
-        double valorHoraNormal;
-        int horasExtrasTrabajadas;
-        int horasExtrasExcedentes8;
-        double salario;
+        double costo_compra;
+        String color_bolita;
+        double valor_pagar;
+        double porcentajeDescuento;
 
-        System.out.println("Ingrese el nombre del trabajador:");
-        nombre = scanner.nextLine();
+        System.out.println("Ingrese el valor de la compra:");
+        costo_compra = scanner.nextDouble();
 
-        System.out.println("Ingrese el número de horas trabajadas:");
-        horasTrabajadas = scanner.nextInt();
+        System.out.println("Ingrese el color de la bolita (BLANCO, VERDE, AMARILLO, AZUL):");
+        scanner.nextLine(); 
+        color_bolita = scanner.nextLine().toUpperCase();
 
-        System.out.println("Ingrese el valor por hora normal de trabajo:");
-        valorHoraNormal = scanner.nextDouble();
-
-        if (horasTrabajadas > 40) {
-            horasExtrasTrabajadas = horasTrabajadas - 40;
-
-            if (horasExtrasTrabajadas > 8) {
-                horasExtrasExcedentes8 = horasExtrasTrabajadas - 8;
-                salario = 40 * valorHoraNormal + 16 * valorHoraNormal + horasExtrasExcedentes8 * 3 * valorHoraNormal;
-            } else {
-                salario = 40 * valorHoraNormal + horasExtrasTrabajadas * 2 * valorHoraNormal;
-            }
-        } else {
-            salario = horasTrabajadas * valorHoraNormal;
+        switch (color_bolita) {
+            case "BLANCO":
+                porcentajeDescuento = 0;
+                break;
+            case "VERDE":
+                porcentajeDescuento = 10;
+                break;
+            case "AMARILLO":
+                porcentajeDescuento = 25;
+                break;
+            case "AZUL":
+                porcentajeDescuento = 50;
+                break;
+            default:
+                porcentajeDescuento = 100;
         }
 
-        System.out.println("El trabajador " + nombre + " devengó: $" + salario);
+        valor_pagar = costo_compra - (porcentajeDescuento * costo_compra / 100);
+
+        System.out.println("El cliente debe pagar: $" + valor_pagar);
 
         scanner.close();
     }
