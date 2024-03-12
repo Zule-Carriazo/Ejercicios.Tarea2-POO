@@ -27,7 +27,6 @@ public class Ejercicio24cap4 {
             System.out.println("Las esferas tienen pesos iguales.");
         }
 
-        scanner.close();
     }
 }
 

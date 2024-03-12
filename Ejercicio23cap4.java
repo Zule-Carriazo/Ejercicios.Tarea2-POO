@@ -8,7 +8,6 @@ public class Ejercicio23cap4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Entrada de datos
         System.out.print("Valor de A: ");
         double A = scanner.nextDouble();
 
@@ -18,10 +17,10 @@ public class Ejercicio23cap4 {
         System.out.print("Valor de C: ");
         double C = scanner.nextDouble();
 
-        // discriminante
+
         double discriminante = B * B - 4 * A * C;
 
-        // Verificar el discriminante para determinar las soluciones
+
         if (discriminante > 0) {
             // Dos soluciones reales distintas
             double x1 = (-B + Math.sqrt(discriminante)) / (2 * A);
@@ -36,7 +35,7 @@ public class Ejercicio23cap4 {
             System.out.println("\nLa solución doble es:");
             System.out.println("x = " + x);
         } else {
-            // Soluciones imaginarias
+    
             double parteReal = -B / (2 * A);
             double parteImaginaria = Math.sqrt(Math.abs(discriminante)) / (2 * A);
 
@@ -45,7 +44,6 @@ public class Ejercicio23cap4 {
             System.out.println("x2 = " + parteReal + " - " + parteImaginaria + "i");
         }
 
-        // Cerrar el scanner
-        scanner.close();
+
     }
 }
