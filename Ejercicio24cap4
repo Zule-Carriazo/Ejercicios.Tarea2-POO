@@ -1,0 +1,29 @@
+package com.mycompany.ejercicio24cap24;
+
+import java.util.Scanner;
+
+public class Ejercicio24cap24 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("\nPesos de las tres esferas (A, B, C):");
+        System.out.print("Peso de la esfera A: ");
+        double A = scanner.nextDouble();
+        System.out.print("Peso de la esfera B: ");
+        double B = scanner.nextDouble();
+        System.out.print("Peso de la esfera C: ");
+        double C = scanner.nextDouble();
+
+        if (A > B && A > C) {
+            System.out.println("La esfera A es de mayor peso");
+        } else if (B > A && B > C) {
+            System.out.println("La esfera B es de mayor peso");
+        } else {
+            System.out.println("La esfera C es de mayor peso");
+        }
+
+        // Cerrar el scanner
+        scanner.close();
+    }
+}
