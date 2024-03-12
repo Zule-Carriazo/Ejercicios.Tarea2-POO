@@ -1,5 +1,4 @@
 package com.mycompany.ejercicio15cap4;
-
 import java.util.Scanner;
 /**
  *
